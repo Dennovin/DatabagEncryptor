@@ -41,7 +41,7 @@ contents.each do |k, v|
     cipher.pkcs5_keyivgen(secret)
     crypt = cipher.update(yaml) + cipher.final
 
-    encrypted_contents[k] = Base64.encode64(YAML.load(yaml))
+    encrypted_contents[k] = Base64.encode64(crypt)
   end
 end
 
