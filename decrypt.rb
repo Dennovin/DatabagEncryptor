@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require "getoptlong"
 require "openssl"
 require "base64"
