@@ -30,7 +30,7 @@ encrypted_contents = {}
 
 contents.each do |k, v|
   if k == "id" || v.nil?
-    contents[k] = v
+    encrypted_contents[k] = v
   else
     yaml = v.to_yaml
 
