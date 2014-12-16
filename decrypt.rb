@@ -47,6 +47,18 @@ opts.each do |opt, arg|
   end
 end
 
+if file.nil?
+  puts "Input file is required."
+  puts help
+  exit 0
+end
+
+if secret.nil?
+  puts "Data bag secret file is required."
+  puts help
+  exit 0
+end
+
 encrypted_contents = JSON.parse(file)
 contents = {}
 
